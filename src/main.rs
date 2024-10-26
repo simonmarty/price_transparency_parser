@@ -40,7 +40,7 @@ fn main() {
 
     println!("{} bytes", size_of_val(&hospital_info));
 
-    // write to file
+    // write to file for now
     let mut file = File::create("./output.json").unwrap();
     file.write_all(serde_json::to_string(&hospital_info).unwrap().as_bytes())
         .unwrap();

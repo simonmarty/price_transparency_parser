@@ -4,14 +4,14 @@ use serde_with::skip_serializing_none;
 #[skip_serializing_none]
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Hospital {
-    pub affirmation: Affirmation,
-    pub hospital_address: Vec<String>,
-    pub hospital_location: Vec<String>,
     pub hospital_name: String,
     pub last_updated_on: chrono::NaiveDate,
-    pub license_information: LicenseInformation,
-    pub standard_charge_information: Vec<StandardChargeInformation>,
     pub version: String,
+    pub hospital_location: Vec<String>,
+    pub hospital_address: Vec<String>,
+    pub license_information: LicenseInformation,
+    pub affirmation: Affirmation,
+    pub standard_charge_information: Vec<StandardChargeInformation>,
     pub modifier_information: Option<Vec<ModifierInformation>>,
 }
 
